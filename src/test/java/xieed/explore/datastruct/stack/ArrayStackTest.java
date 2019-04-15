@@ -7,7 +7,7 @@ public class ArrayStackTest {
 
   @Test
   public void should_success_when_push_one_element_given_empty_stack() throws Exception {
-    ArrayStack arrayStack = new ArrayStack(4);
+    ArrayStack arrayStack = new ArrayStack<Integer>(4);
 
     arrayStack.push(1);
     arrayStack.push(2);
@@ -17,7 +17,7 @@ public class ArrayStackTest {
 
   @Test
   public void should_override_value_from_tail_when_push_one_element_given_full_stack() throws Exception {
-    ArrayStack arrayStack = new ArrayStack(2);
+    ArrayStack arrayStack = new ArrayStack<Integer>(2);
     arrayStack.push(1);
     arrayStack.push(2);
 
@@ -28,12 +28,12 @@ public class ArrayStackTest {
 
   @Test
   public void should_success_when_pop_elements_given_non_empty_stack() throws Exception {
-    ArrayStack arrayStack = new ArrayStack(4);
+    ArrayStack arrayStack = new ArrayStack<Integer>(4);
     arrayStack.push(1);
     arrayStack.push(2);
 
     Assert.assertSame(2, arrayStack.pop());
     Assert.assertSame(1, arrayStack.pop());
-    Assert.assertSame(0, arrayStack.pop());
+    Assert.assertSame(null, arrayStack.pop());
   }
 }
