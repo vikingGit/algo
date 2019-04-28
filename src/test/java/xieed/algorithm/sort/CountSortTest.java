@@ -17,4 +17,9 @@ public class CountSortTest {
         }
         builder.toString().equals("012266710");
     }
+
+    @Test
+    public void name() {
+        System.out.println(Math.floor(0.123));
+    }
 }
