@@ -64,4 +64,109 @@ public class BinarySearch {
 
        return  binarySearchViaRecursion(a, value, startIndex, endIndex);
     }
+
+
+    /**
+     * 二分查找变形1：查找第一个值等于给定值的元素
+     * @param a
+     * @param value
+     * @return
+     */
+    public int binarySearchFirstEqual(int[] a, int value){
+        int startIndex = 0;
+        int endIndex = a.length - 1;
+        int midIndex = 0;
+        int firstMatchIndex = -1;
+
+        while(startIndex<=endIndex){
+            midIndex = (endIndex - startIndex)/2 + startIndex;
+            if(a[midIndex] < value){
+                startIndex = midIndex + 1;
+            }else if(a[midIndex] > value){
+                endIndex = midIndex - 1;
+            }else{
+                firstMatchIndex = midIndex;
+                endIndex = midIndex - 1;
+            }
+        }
+        return firstMatchIndex;
+    }
+
+    /**
+     * 二分查找变形2：查找最后一个值等于给定值的元素
+     * @param a
+     * @param value
+     * @return
+     */
+    public int binarySearchLastEqual(int[] a, int value){
+        int startIndex = 0;
+        int endIndex = a.length - 1;
+        int midIndex = 0;
+        int lastMatchIndex = -1;
+
+        while(startIndex<=endIndex){
+            midIndex = (endIndex - startIndex)/2 + startIndex;
+            if(a[midIndex] < value){
+                startIndex = midIndex + 1;
+            }else if(a[midIndex] > value){
+                endIndex = midIndex - 1;
+            }else{
+                lastMatchIndex = midIndex;
+//                startIndex = midIndex + 1;
+                break;
+            }
+        }
+
+        if(lastMatchIndex != -1){
+            int i = lastMatchIndex;
+            while(a[++i] == value){
+
+            }
+             lastMatchIndex = i - 1;
+        }
+        return lastMatchIndex;
+    }
+
+    public int binarySearchFirstGreaterEqual(int[] a, int value) {
+        int startIndex = 0;
+        int endIndex = a.length - 1;
+        int midIndex = 0;
+        int firstMatchIndex = -1;
+
+        while(startIndex<=endIndex){
+            midIndex = (endIndex - startIndex)/2 + startIndex;
+            if(a[midIndex] < value){
+                startIndex = midIndex + 1;
+            }else if(a[midIndex] > value){
+                firstMatchIndex = midIndex;
+                endIndex = midIndex - 1;
+            }else{
+                firstMatchIndex = midIndex;
+                endIndex = midIndex - 1;
+            }
+        }
+        return firstMatchIndex;
+    }
+
+    public int binarySearchLastLessOrEqual(int[] a, int value) {
+        int startIndex = 0;
+        int endIndex = a.length - 1;
+        int midIndex = 0;
+        int lastMatchIndex = -1;
+
+        while(startIndex<=endIndex){
+            midIndex = (endIndex - startIndex)/2 + startIndex;
+            if(a[midIndex] < value){
+                lastMatchIndex = midIndex;
+                startIndex = midIndex + 1;
+            }else if(a[midIndex] > value){
+                endIndex = midIndex - 1;
+            }else{
+                lastMatchIndex = midIndex;
+                endIndex = midIndex - 1;
+            }
+        }
+        return lastMatchIndex;
+    }
 }
+
