@@ -32,6 +32,4 @@ public class BinaryTreeFactory {
     public CompleteArrayBinaryTree createArrayBinaryTree(int rootData, int len){
         return new CompleteArrayBinaryTree(rootData, len);
     }
-
-
 }

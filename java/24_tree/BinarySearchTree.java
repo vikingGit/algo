@@ -54,7 +54,7 @@ public class BinarySearchTree {
         minP = minP.left;
       }
       p.data = minP.data; // 将minP的数据替换到p中
-      p = minP; // 下面就变成了删除minP了
+      p = minP; // 下面就变成了删除minP了, minP是叶子节点，这个需要结合后面删除叶子节点代码一起看，不然你会晕
       pp = minPP;
     }
 

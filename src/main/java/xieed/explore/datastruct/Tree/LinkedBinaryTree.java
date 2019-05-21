@@ -16,7 +16,7 @@ public class LinkedBinaryTree {
         if(node == null){
             return;
         }
-//        System.out.print(node.getData() + " ");
+//        System.out.print(rootNode.getData() + " ");
         treeBuilder.append(node.getData() + " ");
         loopBinaryTreeOverPreOrder(node.getLeftNode());
         loopBinaryTreeOverPreOrder(node.getRightNode());
@@ -27,7 +27,7 @@ public class LinkedBinaryTree {
             return;
         }
         loopBinaryTreeOverMiddleOrder(node.getLeftNode());
-//        System.out.print(node.getData() + " ");
+//        System.out.print(rootNode.getData() + " ");
         treeBuilder.append(node.getData() + " ");
         loopBinaryTreeOverMiddleOrder(node.getRightNode());
     }
@@ -38,7 +38,7 @@ public class LinkedBinaryTree {
         }
         loopBinaryTreeOverPostOrder(node.getLeftNode());
         loopBinaryTreeOverPostOrder(node.getRightNode());
-        // System.out.print(node.getData() + " ");
+        // System.out.print(rootNode.getData() + " ");
         treeBuilder.append(node.getData() + " ");
     }
 }

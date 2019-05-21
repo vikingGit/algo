@@ -1,10 +1,23 @@
 package xieed.explore.datastruct.Tree;
 
-
 public class TreeNode {
     private int data;
     private TreeNode leftNode;
     private TreeNode rightNode;
+
+    public TreeNode(){
+
+    }
+
+    public TreeNode(int targetData, TreeNode leftNode, TreeNode rightNode) {
+        this.data = targetData;
+        this.leftNode = leftNode;
+        this.rightNode = rightNode;
+    }
+
+    public TreeNode(int targetData) {
+        this.data = targetData;
+    }
 
     public int getData() {
         return data;
