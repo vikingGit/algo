@@ -1,6 +1,6 @@
 package xieed.explore.datastruct.Tree;
 
-public class LinkedBinaryTree {
+public class LinkedBinaryTree implements BinaryTree{
     public TreeNode getRootNode() {
         return rootNode;
     }
@@ -40,5 +40,24 @@ public class LinkedBinaryTree {
         loopBinaryTreeOverPostOrder(node.getRightNode());
         // System.out.print(rootNode.getData() + " ");
         treeBuilder.append(node.getData() + " ");
+    }
+
+    @Override
+    public int height() {
+        return maxHeight(this.getRootNode()) - 1;
+    }
+
+    public int maxHeight(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        int leftHeight = maxHeight(node.getLeftNode()) + 1;
+        int rightHeight = maxHeight(node.getRightNode()) + 1;
+
+        if(leftHeight > rightHeight){
+            return leftHeight;
+        }else{
+            return rightHeight;
+        }
     }
 }

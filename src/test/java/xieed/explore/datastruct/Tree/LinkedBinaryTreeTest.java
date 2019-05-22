@@ -17,7 +17,7 @@ public class LinkedBinaryTreeTest {
     }
 
     @Test
-    public void should_return_data_by_preOrder_when_loopBinaryTreeOverMiddleOrder_given_specific_linkedBinaryTree() {
+    public void should_return_data_by_midOrder_when_loopBinaryTreeOverMiddleOrder_given_specific_linkedBinaryTree() {
         BinaryTreeFactory binaryTreeFactory = new BinaryTreeFactory();
         LinkedBinaryTree linkedBinaryTree = binaryTreeFactory.createLinkedBinaryTree(5);
         linkedBinaryTree.loopBinaryTreeOverMiddleOrder(linkedBinaryTree.getRootNode());
@@ -26,11 +26,19 @@ public class LinkedBinaryTreeTest {
     }
 
     @Test
-    public void should_return_data_by_preOrder_when_loopBinaryTreeOverPostOrder_given_specific_linkedBinaryTree() {
+    public void should_return_data_by_postOrder_when_loopBinaryTreeOverPostOrder_given_specific_linkedBinaryTree() {
         BinaryTreeFactory binaryTreeFactory = new BinaryTreeFactory();
         LinkedBinaryTree linkedBinaryTree = binaryTreeFactory.createLinkedBinaryTree(5);
         linkedBinaryTree.loopBinaryTreeOverPostOrder(linkedBinaryTree.getRootNode());
 
         Assert.assertEquals("8 9 7 8 6 8 9 7 5 ", linkedBinaryTree.treeBuilder.toString());
+    }
+
+    @Test
+    public void should_return_3_when_height_given_specific_linkedBinaryTree() {
+        BinaryTreeFactory binaryTreeFactory = new BinaryTreeFactory();
+        LinkedBinaryTree linkedBinaryTree = binaryTreeFactory.createLinkedBinaryTree(5);
+        linkedBinaryTree.getRootNode().getRightNode().getLeftNode().setLeftNode(new TreeNode(10, null,new TreeNode(12,null, null)));
+         Assert.assertEquals(4, linkedBinaryTree.height());
     }
 }
