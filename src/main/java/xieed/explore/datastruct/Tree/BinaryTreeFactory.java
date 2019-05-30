@@ -29,7 +29,7 @@ public class BinaryTreeFactory {
         return linkedBinaryTree;
     }
 
-    public CompleteArrayBinaryTree createArrayBinaryTree(int rootData, int len){
-        return new CompleteArrayBinaryTree(rootData, len);
+    public CompletedBinaryTree createArrayBinaryTree(int rootData, int initLen, int maxlen){
+        return new CompletedBinaryTree(rootData, initLen, maxlen);
     }
 }

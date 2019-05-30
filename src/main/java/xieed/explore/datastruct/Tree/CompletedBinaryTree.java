@@ -1,13 +1,15 @@
 package xieed.explore.datastruct.Tree;
 
-public  class CompleteArrayBinaryTree {
+public  class CompletedBinaryTree {
     int[] element;
     private static final int rootIndex = 1;
+    int initLen;
     StringBuilder builder = new StringBuilder();
 
-    public CompleteArrayBinaryTree(int rootData, int len) {
-        element = new int[len];
+    public CompletedBinaryTree(int rootData, int initLen, int maxLen) {
+        element = new int[maxLen];
         element[rootIndex] = rootData;
+        this.initLen = initLen;
         fillArrayBinaryTreeData(rootIndex);
     }
 
@@ -15,13 +17,9 @@ public  class CompleteArrayBinaryTree {
         return element;
     }
 
-    public StringBuilder getBuilder() {
-        return builder;
-    }
-
     void fillArrayBinaryTreeData(int parentIndex){
         int leftNodeIndex = 2 * parentIndex;
-        if(leftNodeIndex > this.element.length - 2){
+        if(leftNodeIndex > this.initLen - 2){
             return;
         }
         this.element[leftNodeIndex] = 2*this.element[parentIndex];

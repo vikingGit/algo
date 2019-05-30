@@ -22,7 +22,7 @@ public class BinaryTreeFactoryTest {
 
     @Test
     public void should_return_correct_tree_when_createCompleteBinaryTree_given_root_data() {
-        CompleteArrayBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(1,10);
+        CompletedBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(1,10, 20);
         StringBuilder builder = new StringBuilder();
         Arrays.stream(binaryTree.getElement()).forEach(i -> builder.append(i));
         System.out.println(builder.toString());

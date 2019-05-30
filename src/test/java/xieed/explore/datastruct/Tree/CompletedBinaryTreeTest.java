@@ -3,13 +3,11 @@ package xieed.explore.datastruct.Tree;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class CompleteArrayBinaryTreeTest {
+public class CompletedBinaryTreeTest {
 
     @Test
     public void should_return_data_by_preOrder_when_loopBinaryTreeOverPreOrder_given_specific_CompleteArrayBinaryTree() {
-        CompleteArrayBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10);
+        CompletedBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10, 20);
 
         binaryTree.loopBinaryTreeOverPreOrder(1);
 
@@ -18,7 +16,7 @@ public class CompleteArrayBinaryTreeTest {
 
     @Test
     public void should_return_data_by_preOrder_when_loopBinaryTreeOverMiddleOrder_given_specific_CompleteArrayBinaryTree() {
-        CompleteArrayBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10);
+        CompletedBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10, 20);
 
         binaryTree.loopBinaryTreeOverMiddleOrder(1);
 
@@ -27,7 +25,7 @@ public class CompleteArrayBinaryTreeTest {
 
     @Test
     public void should_return_data_by_preOrder_when_loopBinaryTreeOverPostOrder_given_specific_CompleteArrayBinaryTree() {
-        CompleteArrayBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10);
+        CompletedBinaryTree binaryTree = new BinaryTreeFactory().createArrayBinaryTree(2,10, 20);
 
         binaryTree.loopBinaryTreeOverPostOrder(1);
 
