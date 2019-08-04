@@ -1,4 +1,4 @@
-package xieed.algorithm.BackTracke;
+package xieed.algorithm.BackTrack;
 
 public class MaxWeightPackage {
     int[] items = new int[]{2,4,3,7};

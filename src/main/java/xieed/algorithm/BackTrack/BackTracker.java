@@ -1,4 +1,4 @@
-package xieed.algorithm.BackTracke;
+package xieed.algorithm.BackTrack;
 
 public class BackTracker {
     int[] result = new int[8];// 全局或成员变量, 下标表示行, 值表示 queen 存储在哪一列

@@ -1,4 +1,4 @@
-package xieed.algorithm.BackTracke;
+package xieed.algorithm.BackTrack;
 
 import org.junit.Test;
 
